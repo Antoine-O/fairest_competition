@@ -1,2 +1,2 @@
-# fairest_competition
-A JSON Based competition format
+# fairest competition
+A JSON Based competition format tools
