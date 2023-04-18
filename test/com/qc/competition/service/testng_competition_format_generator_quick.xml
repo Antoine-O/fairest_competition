@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Initial Scenario">
+    <test name="Simple Generation Test" preserve-order="true">
+        <classes>
+            <class name="com.qc.competition.service.CompetitionDetailsGeneratorTest">
+                <methods>
+                    <include name="testComputationRankingParticipantEliminationSimpleForcedQuick"/>
+                    <include name="testComputationRankingParticipantEliminationDoubleForcedQuick"/>
+                    <include name="testComputationRankingParticipantEliminationTripleForcedQuick"/>
+                    <include name="testComputationRankingParticipantEliminationQuadrupleForcedQuick"/>
+                    <include name="testComputationRankingParticipantSwissForcedQuick"/>
+                    <include name="testComputationRankingParticipantRoundRobinForcedQuick"/>
+                    <include name="testComputationRankingParticipantEliminationSimpleQuick"/>
+                    <include name="testComputationRankingParticipantEliminationDoubleQuick"/>
+                    <include name="testComputationRankingParticipantSwissQuick"/>
+                    <include name="testComputationRankingParticipantRoundRobinQuick"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

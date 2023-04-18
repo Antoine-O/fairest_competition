@@ -1,0 +1,88 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testng_competition_update_quick_all_save_and_reload" verbose="1">
+    <test name="testng_competition_update_quick_all_save_and_reload" preserve-order="true" parallel="classes">
+        <classes>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_phase_format_different">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_quickgame">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_scoringmode">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_advantage">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_reset">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_without_merge">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1_2Qualified">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1_notsplittable">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTestHighScore">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_laddering_one_play">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_laddering_one_play_on_the_fly">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTestHighScore_ladder">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationQuickWithSaveAndReload"/>
+                </methods>
+            </class>
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1_2Qualified"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest2v2"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest3v3in1v1"/>-->
+        </classes>
+    </test>
+</suite>
