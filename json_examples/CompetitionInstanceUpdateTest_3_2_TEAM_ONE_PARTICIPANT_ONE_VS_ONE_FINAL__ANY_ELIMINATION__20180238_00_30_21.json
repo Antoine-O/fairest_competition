@@ -1,0 +1,821 @@
+{
+  "type": "CompetitionInstance",
+  "id": "0001",
+  "startDate": 1517959821573,
+  "localId": "3",
+  "status": "IN_PROGRESS",
+  "idGenerator": {
+    "idGeneratorElements": [
+      {
+        "key": "Participant",
+        "value": 4
+      },
+      {
+        "key": "Global",
+        "value": 113
+      },
+      {
+        "key": "ParticipantSeat",
+        "value": 14
+      },
+      {
+        "key": "Bib Number",
+        "value": 2
+      },
+      {
+        "key": "ParticipantTeamMember",
+        "value": 2
+      },
+      {
+        "key": "CompetitionSeed",
+        "value": 2
+      },
+      {
+        "key": "CompetitionGroup",
+        "value": 2
+      },
+      {
+        "key": "CompetitionGroupResult",
+        "value": 2
+      },
+      {
+        "key": "ParticipantResult",
+        "value": 6
+      },
+      {
+        "key": "ParticipantScoreSeed",
+        "value": 4
+      },
+      {
+        "key": "CompetitionRound",
+        "value": 1
+      },
+      {
+        "key": "CompetitionMatch",
+        "value": 1
+      },
+      {
+        "key": "CompetitionPlay",
+        "value": 5
+      },
+      {
+        "key": "ParticipantPairing",
+        "value": 6
+      },
+      {
+        "key": "ParticipantScorePlay",
+        "value": 2
+      },
+      {
+        "key": "ParticipantScoreMatch",
+        "value": 0
+      },
+      {
+        "key": "ParticipantScoreRound",
+        "value": 0
+      },
+      {
+        "key": "ParticipantScoreGroup",
+        "value": 0
+      },
+      {
+        "key": "ParticipantScoreCompetition",
+        "value": 0
+      }
+    ]
+  },
+  "competitionSeed": "0009",
+  "label": {
+    "defaultLabel": "2 Participants / TEAM_ONE_PARTICIPANT / numberOfParticipantMatch =2 / ONE_VS_ONE",
+    "internationalizedLabelMap": {}
+  },
+  "results": [],
+  "seats": [
+    {
+      "id": "0003",
+      "localId": "0001",
+      "participantId": "0079",
+      "competitionId": "0001"
+    },
+    {
+      "id": "0006",
+      "localId": "0002",
+      "participantId": "0082",
+      "competitionId": "0001"
+    }
+  ],
+  "parameters": {
+    "numberOfParticipantCompetition": 2,
+    "participantType": "TEAM_ONE_PARTICIPANT",
+    "playVersusType": "ONE_VS_ONE",
+    "numberOfParticipantMatch": 2,
+    "averagePlayDuration": "PT15M",
+    "minimumPlayDuration": "PT5M",
+    "maximumPlayDuration": "PT30M",
+    "intermissionDuration": "PT2M",
+    "maxNumberOfPlayGlobal": 5,
+    "minNumberOfPlayGlobal": 1,
+    "maxGroupSize": 2,
+    "maxFinalGroupSize": 2,
+    "maximumNumberOfParallelPlay": 0,
+    "maximumEliminationLevel": 2,
+    "minimumEliminationLevel": 1,
+    "finalPhase": true,
+    "qualificationPhase": false,
+    "allowEvenNumberOfPlay": false,
+    "mixingPhase": false,
+    "progressiveNumberOfPlay": true,
+    "minGroupSize": 2,
+    "numberOfPlayMultiplicator": 1,
+    "sharerPercentageLimit": 10,
+    "participantQualifiedPerMatch": 1,
+    "minFinalGroupSize": 2,
+    "finalPhaseTournamentFormatsAccepted": [
+      "ANY_ELIMINATION"
+    ],
+    "qualificationPhaseTournamentFormatsAccepted": [],
+    "mixingPhaseTournamentFormatsAccepted": [],
+    "competitionDuration": "PT6H",
+    "competitionName": "null[AllMagic]"
+  },
+  "seeds": [
+    {
+      "type": "CompetitionSeed",
+      "id": "0009",
+      "filteringValue": 0,
+      "participantFilteringMethod": "ALL",
+      "participantPairingMethod": "RANDOM",
+      "emptyPhase": true,
+      "round": 0,
+      "localId": "0001",
+      "status": "CLOSED",
+      "groupResultPreviousIds": [],
+      "groupIds": [
+        "0010"
+      ],
+      "label": {
+        "defaultLabel": null,
+        "internationalizedLabelMap": {}
+      },
+      "pairings": [],
+      "results": [
+        {
+          "id": "0090",
+          "localId": "0005",
+          "participantId": "0079",
+          "score": {
+            "type": "ScoreSeed",
+            "id": "0091",
+            "localId": "0003",
+            "subScores": [],
+            "values": [
+              {
+                "name": "RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": "1"
+              },
+              {
+                "name": "LAST_ACTIVE_GROUP_RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "LAST_ACTIVE_GROUP_LANE",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              }
+            ],
+            "competitionId": "0001"
+          },
+          "rank": 1,
+          "participantEqualityComparison": 0.03916346130183146,
+          "submissionDate": 1517959821574,
+          "competitionId": "0001"
+        },
+        {
+          "id": "0092",
+          "localId": "0006",
+          "participantId": "0082",
+          "score": {
+            "type": "ScoreSeed",
+            "id": "0093",
+            "localId": "0004",
+            "subScores": [],
+            "values": [
+              {
+                "name": "RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": "1"
+              },
+              {
+                "name": "LAST_ACTIVE_GROUP_RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "LAST_ACTIVE_GROUP_LANE",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              }
+            ],
+            "competitionId": "0001"
+          },
+          "rank": 1,
+          "participantEqualityComparison": 0.07221885533341876,
+          "submissionDate": 1517959821574,
+          "competitionId": "0001"
+        }
+      ],
+      "nextCompetitionSeedIds": [],
+      "previousCompetitionSeedIds": [],
+      "competitionInstanceId": "0001"
+    },
+    {
+      "type": "CompetitionSeed",
+      "id": "0022",
+      "filteringUnit": "ABSOLUTE",
+      "filteringValue": 2,
+      "participantFilteringMethod": "ALL",
+      "participantPairingMethod": "TOP_VS_MIDDLE",
+      "emptyPhase": false,
+      "round": 1,
+      "localId": "0002",
+      "status": "IN_PROGRESS",
+      "groupResultPreviousIds": [
+        "0011"
+      ],
+      "groupIds": [
+        "0023"
+      ],
+      "label": {
+        "defaultLabel": "Final Phase (1 elimination)",
+        "internationalizedLabelMap": {}
+      },
+      "pairings": [
+        "0094"
+      ],
+      "results": [],
+      "nextCompetitionSeedIds": [],
+      "previousCompetitionSeedIds": [],
+      "competitionInstanceId": "0001"
+    }
+  ],
+  "matches": [
+    {
+      "type": "CompetitionMatch",
+      "id": "0026",
+      "lane": 1,
+      "matchType": "NORMAL",
+      "localId": "0001",
+      "status": "IN_PROGRESS",
+      "playIds": [
+        "0027",
+        "0028",
+        "0029",
+        "0030",
+        "0031"
+      ],
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "matchDetails.1",
+        "internationalizedLabelMap": {}
+      },
+      "pairing": "0094",
+      "result": [],
+      "nextMatchesIds": [],
+      "previousMatchesIds": [],
+      "competitionId": "0001"
+    }
+  ],
+  "plays": [
+    {
+      "type": "CompetitionPlay",
+      "id": "0027",
+      "playType": "NORMAL",
+      "participantPairing": "0097",
+      "playVersusType": "ONE_VS_ONE",
+      "round": 1,
+      "localId": "0001",
+      "status": "CLOSED",
+      "matchId": "0026",
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "playDetails.1",
+        "internationalizedLabelMap": {}
+      },
+      "results": [
+        {
+          "id": "0002",
+          "localId": "0001",
+          "participantId": "0079",
+          "score": {
+            "type": "ScorePlay",
+            "id": "0112",
+            "localId": "0001",
+            "subScores": [],
+            "values": [
+              {
+                "name": "RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": "1"
+              },
+              {
+                "name": "POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": "2"
+              },
+              {
+                "name": "BAD_POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "GOAL",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              },
+              {
+                "name": "TIMELAST",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              },
+              {
+                "name": "TIMERUN",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              }
+            ],
+            "competitionId": "0001",
+            "scores": []
+          },
+          "rank": 1,
+          "participantEqualityComparison": 0.03916346130183146,
+          "submissionDate": 1517959821755,
+          "competitionId": "0001"
+        },
+        {
+          "id": "0003",
+          "localId": "0002",
+          "participantId": "0082",
+          "score": {
+            "type": "ScorePlay",
+            "id": "0113",
+            "localId": "0002",
+            "subScores": [],
+            "values": [
+              {
+                "name": "RANK",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": "2"
+              },
+              {
+                "name": "POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": "1"
+              },
+              {
+                "name": "BAD_POINTS",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              },
+              {
+                "name": "GOAL",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              },
+              {
+                "name": "TIMELAST",
+                "scoreScale": "ABSOLUTE_INTEGER_REVERSED",
+                "value": null
+              },
+              {
+                "name": "TIMERUN",
+                "scoreScale": "ABSOLUTE_INTEGER",
+                "value": null
+              }
+            ],
+            "competitionId": "0001",
+            "scores": []
+          },
+          "rank": 2,
+          "participantEqualityComparison": 0.07221885533341876,
+          "submissionDate": 1517959821755,
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "type": "CompetitionPlay",
+      "id": "0028",
+      "playType": "NORMAL",
+      "participantPairing": "0100",
+      "playVersusType": "ONE_VS_ONE",
+      "round": 2,
+      "localId": "0002",
+      "status": "IN_PROGRESS",
+      "matchId": "0026",
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "playDetails.2",
+        "internationalizedLabelMap": {}
+      },
+      "results": [],
+      "competitionId": "0001"
+    },
+    {
+      "type": "CompetitionPlay",
+      "id": "0029",
+      "playType": "NORMAL",
+      "participantPairing": "0103",
+      "playVersusType": "ONE_VS_ONE",
+      "round": 3,
+      "localId": "0003",
+      "status": "WAIT_FOR_START",
+      "matchId": "0026",
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "playDetails.3",
+        "internationalizedLabelMap": {}
+      },
+      "results": [],
+      "competitionId": "0001"
+    },
+    {
+      "type": "CompetitionPlay",
+      "id": "0030",
+      "playType": "NORMAL",
+      "participantPairing": "0106",
+      "playVersusType": "ONE_VS_ONE",
+      "round": 4,
+      "localId": "0004",
+      "status": "WAIT_FOR_START",
+      "matchId": "0026",
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "playDetails.4",
+        "internationalizedLabelMap": {}
+      },
+      "results": [],
+      "competitionId": "0001"
+    },
+    {
+      "type": "CompetitionPlay",
+      "id": "0031",
+      "playType": "NORMAL",
+      "participantPairing": "0109",
+      "playVersusType": "ONE_VS_ONE",
+      "round": 5,
+      "localId": "0005",
+      "status": "WAIT_FOR_START",
+      "matchId": "0026",
+      "roundId": "0025",
+      "groupId": "0023",
+      "seedId": "0022",
+      "label": {
+        "defaultLabel": "playDetails.5",
+        "internationalizedLabelMap": {}
+      },
+      "results": [],
+      "competitionId": "0001"
+    }
+  ],
+  "groups": [
+    {
+      "type": "CompetitionGroup",
+      "id": "0010",
+      "competitionGroupFormat": "NONE",
+      "competitionSeed": "0009",
+      "lane": 1,
+      "expectedParticipantQuantity": 0,
+      "localId": "0001",
+      "status": "CLOSED",
+      "group_result_id": "0011",
+      "roundIds": [],
+      "label": {
+        "defaultLabel": null,
+        "internationalizedLabelMap": {}
+      },
+      "pairings": [],
+      "competitionId": "0001"
+    },
+    {
+      "type": "CompetitionGroup",
+      "id": "0023",
+      "competitionGroupFormat": "ELIMINATION",
+      "competitionSeed": "0022",
+      "lane": 1,
+      "expectedParticipantQuantity": 2,
+      "localId": "0002",
+      "status": "IN_PROGRESS",
+      "group_result_id": "0024",
+      "roundIds": [
+        "0025"
+      ],
+      "label": {
+        "defaultLabel": "bracket.main",
+        "internationalizedLabelMap": {}
+      },
+      "pairings": [
+        "0094"
+      ],
+      "competitionId": "0001"
+    }
+  ],
+  "rounds": [
+    {
+      "type": "CompetitionRound",
+      "id": "0025",
+      "round": 1,
+      "localId": "0001",
+      "status": "IN_PROGRESS",
+      "groupId": "0023",
+      "seedId": "0022",
+      "matchIds": [
+        "0026"
+      ],
+      "label": {
+        "defaultLabel": "roundDetails.1",
+        "internationalizedLabelMap": {}
+      },
+      "pairings": [
+        "0094"
+      ],
+      "results": [],
+      "competitionId": "0001"
+    }
+  ],
+  "groupResults": [
+    {
+      "id": "0011",
+      "groupId": "0010",
+      "seedId": "0009",
+      "nextSeedId": "0022",
+      "localId": "0001",
+      "label": {
+        "defaultLabel": null,
+        "internationalizedLabelMap": {}
+      },
+      "results": [
+        {
+          "id": "0084",
+          "localId": "0001",
+          "participantId": "0079",
+          "rank": 0,
+          "participantEqualityComparison": 0.03916346130183146,
+          "submissionDate": 1517959821334,
+          "competitionId": "0001"
+        },
+        {
+          "id": "0085",
+          "localId": "0002",
+          "participantId": "0082",
+          "rank": 0,
+          "participantEqualityComparison": 0.07221885533341876,
+          "submissionDate": 1517959821335,
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0024",
+      "groupId": "0023",
+      "seedId": "0022",
+      "localId": "0002",
+      "label": {
+        "defaultLabel": null,
+        "internationalizedLabelMap": {}
+      },
+      "results": [],
+      "competitionId": "0001"
+    }
+  ],
+  "participantSingles": [
+    {
+      "type": "single",
+      "id": "0078",
+      "equalityComparison": 0.03916346130183146,
+      "bibNumber": "0001",
+      "playIds": [],
+      "localId": "0001",
+      "label": {
+        "defaultLabel": "ParticipantSingle 0001",
+        "internationalizedLabelMap": {}
+      },
+      "competitionId": "0001"
+    },
+    {
+      "type": "single",
+      "id": "0081",
+      "equalityComparison": 0.07221885533341876,
+      "bibNumber": "0002",
+      "playIds": [],
+      "localId": "0003",
+      "label": {
+        "defaultLabel": "ParticipantSingle 0003",
+        "internationalizedLabelMap": {}
+      },
+      "competitionId": "0001"
+    }
+  ],
+  "participantTeams": [
+    {
+      "type": "team",
+      "id": "0079",
+      "equalityComparison": 0.03916346130183146,
+      "bibNumber": "0001",
+      "playIds": [],
+      "localId": "0002",
+      "label": {
+        "defaultLabel": "ParticipantSingle 0001",
+        "internationalizedLabelMap": {}
+      },
+      "competitionId": "0001",
+      "members": [
+        {
+          "id": "0080",
+          "manager": false,
+          "name": "ParticipantTeamMember 0001",
+          "localId": "0001",
+          "competitionId": "0001",
+          "participantId": "0078",
+          "participantTeamId": "0079"
+        }
+      ]
+    },
+    {
+      "type": "team",
+      "id": "0082",
+      "equalityComparison": 0.07221885533341876,
+      "bibNumber": "0002",
+      "playIds": [],
+      "localId": "0004",
+      "label": {
+        "defaultLabel": "ParticipantSingle 0003",
+        "internationalizedLabelMap": {}
+      },
+      "competitionId": "0001",
+      "members": [
+        {
+          "id": "0083",
+          "manager": false,
+          "name": "ParticipantTeamMember 0002",
+          "localId": "0002",
+          "competitionId": "0001",
+          "participantId": "0081",
+          "participantTeamId": "0082"
+        }
+      ]
+    }
+  ],
+  "participants": [
+    "0079",
+    "0082"
+  ],
+  "pairings": [
+    {
+      "id": "0094",
+      "seedId": "0022",
+      "groupId": "0023",
+      "roundId": "0025",
+      "matchId": "0026",
+      "localId": "0001",
+      "seats": [
+        {
+          "id": "0095",
+          "localId": "0003",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0096",
+          "localId": "0004",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0097",
+      "playId": "0027",
+      "localId": "0002",
+      "seats": [
+        {
+          "id": "0098",
+          "localId": "0005",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0099",
+          "localId": "0006",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0100",
+      "playId": "0028",
+      "localId": "0003",
+      "seats": [
+        {
+          "id": "0101",
+          "localId": "0007",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0102",
+          "localId": "0008",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0103",
+      "playId": "0029",
+      "localId": "0004",
+      "seats": [
+        {
+          "id": "0104",
+          "localId": "0009",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0105",
+          "localId": "0010",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0106",
+      "playId": "0030",
+      "localId": "0005",
+      "seats": [
+        {
+          "id": "0107",
+          "localId": "0011",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0108",
+          "localId": "0012",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    },
+    {
+      "id": "0109",
+      "playId": "0031",
+      "localId": "0006",
+      "seats": [
+        {
+          "id": "0110",
+          "localId": "0013",
+          "participantId": "0079",
+          "competitionId": "0001"
+        },
+        {
+          "id": "0111",
+          "localId": "0014",
+          "participantId": "0082",
+          "competitionId": "0001"
+        }
+      ],
+      "competitionId": "0001"
+    }
+  ]
+}
