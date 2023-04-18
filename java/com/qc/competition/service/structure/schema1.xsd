@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+
+    <xs:element name="competitionGroup" type="competitionGroup"/>
+
+    <xs:element name="competitionGroupMatch" type="competitionGroupMatch"/>
+
+    <xs:element name="competitionGroupPlay" type="competitionGroupPlay"/>
+
+    <xs:element name="competitionGroupResult" type="competitionGroupResult"/>
+
+    <xs:element name="competitionGroupRound" type="competitionGroupRound"/>
+
+    <xs:element name="competitionGroupSeed" type="competitionGroupSeed"/>
+
+    <xs:element name="competitionInstance" type="competitionInstance"/>
+
+    <xs:element name="internationalizedLabel" type="internationalizedLabel"/>
+
+    <xs:element name="participant" type="participant"/>
+
+    <xs:element name="participantPairing" type="participantPairing"/>
+
+    <xs:element name="participantResult" type="participantResult"/>
+
+    <xs:element name="participantScore" type="participantScore"/>
+
+    <xs:element name="participantScoreValue" type="participantScoreValue"/>
+
+    <xs:element name="participantSeat" type="participantSeat"/>
+
+    <xs:element name="participantTeamMember" type="participantTeamMember"/>
+
+    <xs:complexType name="competitionInstance">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element name="competitionGroupSeedId" type="xs:int" minOccurs="0"/>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element name="participantResults" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="participantSeats" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantSeat" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="competitionGroupSeeds" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="competitionGroupSeed" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="averagePlayDuration" type="xs:string"/>
+                <xs:attribute name="competitionInstanceDuration" type="xs:string"/>
+                <xs:attribute name="numberOfParticipantMatch" type="xs:int" use="required"/>
+                <xs:attribute name="participantType" type="participantType"/>
+                <xs:attribute name="playVersusType" type="playVersusType"/>
+                <xs:attribute name="game" type="xs:string"/>
+                <xs:attribute name="gameEditor" type="xs:string"/>
+                <xs:attribute name="startDate" type="xs:dateTime"/>
+                <xs:attribute name="localId" type="xs:int"/>
+                <xs:attribute name="databaseId" type="xs:int"/>
+                <xs:attribute name="maximumPlayPerParticipant" type="xs:int" use="required"/>
+                <xs:attribute name="minimumPlayPerParticipant" type="xs:int" use="required"/>
+                <xs:attribute name="numberOfPlayTotal" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="competitionObjectWithResult" abstract="true">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="internationalizedLabel">
+        <xs:sequence>
+            <xs:element name="internationalizedLabelMap">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="key" minOccurs="0" type="xs:string"/>
+                                    <xs:element name="value" minOccurs="0" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="defaultLabel" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="participantResult">
+        <xs:sequence>
+            <xs:choice minOccurs="0">
+                <xs:element name="ParticipantScorePlay" type="ParticipantScorePlay"/>
+                <xs:element name="ParticipantScoreMatch" type="ParticipantScoreMatch"/>
+                <xs:element name="ParticipantScoreRound" type="ParticipantScoreRound"/>
+                <xs:element name="ParticipantScoreGroupRound" type="ParticipantScoreGroupRound"/>
+                <xs:element name="ParticipantScoreGroup" type="ParticipantScoreGroup"/>
+                <xs:element name="ParticipantScoreGroupSeed" type="ParticipantScoreGroupSeed"/>
+                <xs:element name="ParticipantScoreCompetition" type="ParticipantScoreCompetition"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="rank" type="xs:int" use="required"/>
+        <xs:attribute name="participantId" type="xs:int"/>
+        <xs:attribute name="participantEqualityComparison" type="xs:double"/>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScorePlay">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="participantScore" abstract="true">
+        <xs:sequence>
+            <xs:element name="participantScoreValues" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="participantScoreValue" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="participantScoresSubIds" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="participantScoresSubId" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="competitionObjectWithResultId" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="participantScoreValue">
+        <xs:sequence/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="scoreScaleType" type="scoreScaleType"/>
+        <xs:attribute name="value" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreCompetition">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreGroup">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreGroupRound">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreSeed">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreMatch">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantScoreRound">
+        <xs:complexContent>
+            <xs:extension base="participantScore">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="participantSeat">
+        <xs:sequence>
+            <xs:element ref="participant" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="participantId" type="xs:int"/>
+        <xs:attribute name="registrationDate" type="xs:dateTime"/>
+        <xs:attribute name="registrationStatus" type="registrationStatus"/>
+    </xs:complexType>
+
+    <xs:complexType name="participant" abstract="true">
+        <xs:sequence>
+            <xs:element name="competitionGroupPlays" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="competitionGroupPlay" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="internationalizedLabel" minOccurs="0"/>
+            <xs:element name="participantSeats" type="participantSeat" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="equalityComparison" type="xs:double"/>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="databaseId" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroupPlay">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element ref="participantPairing" minOccurs="0"/>
+                    <xs:element name="participantResults" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="localId" type="xs:int"/>
+                <xs:attribute name="databaseId" type="xs:int"/>
+                <xs:attribute name="playVersusType" type="playVersusType"/>
+                <xs:attribute name="round" type="xs:int" use="required"/>
+                <xs:attribute name="playStatus" type="playStatus"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="participantPairing">
+        <xs:sequence>
+            <xs:element name="participantSeats" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="participantSeat" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantSingle">
+        <xs:complexContent>
+            <xs:extension base="participant">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantTeam">
+        <xs:complexContent>
+            <xs:extension base="participant">
+                <xs:sequence>
+                    <xs:element name="participantTeamMembers" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantTeamMember" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="participantTeamMember">
+        <xs:sequence>
+            <xs:element ref="participant" minOccurs="0"/>
+            <xs:element name="participantTeam" type="ParticipantTeam" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="manager" type="xs:boolean" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="ParticipantTeamVoid">
+        <xs:complexContent>
+            <xs:extension base="ParticipantTeam">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroupSeed">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element name="competitionGroups" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="competitionGroup" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element name="participantPairings" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantPairing" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="participantResults" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="nextCompetitionGroupSeedIds" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nextCompetitionGroupSeedId" type="xs:int" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="allPreviousParticipantPairings" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="allPreviousParticipantPairing" type="participantPairing" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="filteringUnit" type="unit"/>
+                <xs:attribute name="filteringValue" type="xs:int" use="required"/>
+                <xs:attribute name="localId" type="xs:int"/>
+                <xs:attribute name="participantFilteringMethod" type="participantFilteringMethod"/>
+                <xs:attribute name="participantPairingMethod" type="participantPairingMethod"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroup">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element ref="competitionGroupResult" minOccurs="0"/>
+                    <xs:element name="competitionGroupRounds" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="competitionGroupRound" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element name="participantPairings" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantPairing" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="competitionFormat" type="competitionGroupFormat"/>
+                <xs:attribute name="lane" type="xs:int" use="required"/>
+                <xs:attribute name="localId" type="xs:int"/>
+                <xs:attribute name="step" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroupResult">
+        <xs:sequence>
+            <xs:element ref="internationalizedLabel" minOccurs="0"/>
+            <xs:element name="participantResults" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="localId" type="xs:int"/>
+        <xs:attribute name="competitionGroupSeedNextId" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroupRound">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element name="competitionGroupMatches" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="competitionGroupMatch" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element name="participantPairings" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantPairing" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="participantResults" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="localId" type="xs:int"/>
+                <xs:attribute name="round" type="xs:int" use="required"/>
+                <xs:attribute name="competitionGroupRoundPreviousId" type="xs:int"/>
+                <xs:attribute name="competitionGroupRoundNextId" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="competitionGroupMatch">
+        <xs:complexContent>
+            <xs:extension base="competitionObjectWithResult">
+                <xs:sequence>
+                    <xs:element name="competitionGroupPlays" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="competitionGroupPlay" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="internationalizedLabel" minOccurs="0"/>
+                    <xs:element ref="participantPairing" minOccurs="0"/>
+                    <xs:element name="participantResults" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="participantResult" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="nextCompetitionGroupMatchesId" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nextCompetitionGroupMatchId" type="xs:int" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="previousCompetitionGroupMatchesId" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="previousCompetitionGroupMatchId" type="xs:int" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="lane" type="xs:int" use="required"/>
+                <xs:attribute name="localId" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="scoreScaleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ABSOLUTE_INTEGER"/>
+            <xs:enumeration value="ABSOLUTE_NUMERIC_REVERSED"/>
+            <xs:enumeration value="NOTATION_100"/>
+            <xs:enumeration value="ABSOLUTE_INTEGER_REVERSED"/>
+            <xs:enumeration value="NOTATION_10_REVERSED"/>
+            <xs:enumeration value="NOTATION_10"/>
+            <xs:enumeration value="NOTATION_100_REVERSED"/>
+            <xs:enumeration value="ABSOLUTE_NUMERIC"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="playVersusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ONE_VS_ONE"/>
+            <xs:enumeration value="SIX_VS_SIX"/>
+            <xs:enumeration value="TWO_VS_TWO"/>
+            <xs:enumeration value="THREE_VS_THREE"/>
+            <xs:enumeration value="FOUR_VS_FOUR"/>
+            <xs:enumeration value="FIVE_VS_FIVE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="playStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="WAIT_FOR_START"/>
+            <xs:enumeration value="IN_PROGRESS"/>
+            <xs:enumeration value="DONE"/>
+            <xs:enumeration value="CLOSED"/>
+            <xs:enumeration value="RESULT_REFUTED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="registrationStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CANCELLED"/>
+            <xs:enumeration value="ACCEPTED"/>
+            <xs:enumeration value="REFUSED"/>
+            <xs:enumeration value="SUBMITTED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="participantType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TEAM_FIVE_PARTICIPANTS"/>
+            <xs:enumeration value="TEAM_ONE_PARTICIPANT"/>
+            <xs:enumeration value="TEAM_SIX_PARTICIPANTS"/>
+            <xs:enumeration value="TEAM_FOUR_PARTICIPANTS"/>
+            <xs:enumeration value="TEAM_THREE_PARTICIPANTS"/>
+            <xs:enumeration value="TEAM_TWO_PARTICIPANTS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="competitionGroupFormat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SWISS"/>
+            <xs:enumeration value="CUSTOM"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="ROUND_ROBIN"/>
+            <xs:enumeration value="ELIMINATION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="unit">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ABSOLUTE"/>
+            <xs:enumeration value="PERCENTAGE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="participantFilteringMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="HIGH_PASS"/>
+            <xs:enumeration value="LOW_PASS"/>
+            <xs:enumeration value="ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="participantPairingMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHIFT"/>
+            <xs:enumeration value="TOP_VS_MIDDLE"/>
+            <xs:enumeration value="BASED_ON_PREVIOUS_RESULT"/>
+            <xs:enumeration value="RANDOM"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
