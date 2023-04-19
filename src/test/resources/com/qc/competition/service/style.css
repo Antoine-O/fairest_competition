@@ -1,0 +1,493 @@
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: "Roboto";
+    font-size: 1em;
+}
+
+a {
+    color: #00b6e3;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: #00b6e3;
+    display: table;
+}
+
+#header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30pt;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#navigation {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #1d1d1d;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    line-height: 50px;
+    margin: -7px;
+}
+
+#navigation ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style: none;
+}
+
+#navigation ul li a {
+    height: inherit;
+    padding: 0 25px;
+    display: inline-block;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+    line-height: inherit;
+    text-transform: uppercase;
+    margin: -7px;
+}
+
+#navigation ul li a:hover {
+    background: #00b6e3;
+    color: #fff;
+}
+
+#navigation.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.competition_label {
+    font-weight: bolder;
+    font-size: x-large;
+    height: 50px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.seeds {
+    margin-bottom: 50px;
+    border: 0;
+    /*float: bottom;*/
+    display: block;
+}
+
+.seed {
+    display: inline-table;
+    margin: 10px 10px 10px 10px;
+}
+
+.groups {
+    display: block;
+}
+
+.group {
+    display: inline-table;
+    margin: 10px 10px 10px 10px;
+}
+
+.rounds {
+    display: block;
+    /*display: table;*/
+    /*clear: both;*/
+    /*width: 100%;*/
+    /*margin: 10px 10px 10px 10px;*/
+}
+
+.round {
+    display: table-row;
+    margin: 10px 10px 10px 10px;
+}
+
+.round.elimination {
+    display: table-cell;
+    margin: 10px 10px 10px 10px;
+}
+
+/*[class*='round'] {*/
+/*/!*float: left;*!/*/
+/*min-height: 1px; */
+/*}*/
+
+.roundnumber {
+    /*float: left;*/
+    /*min-height: 1px;*/
+}
+
+.matches {
+    display: block;
+}
+
+.match {
+    background-color: #1d1d1d;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 25px 25px 25px 25px;
+    /*height: 75px;*/
+    display: block;
+
+}
+
+.participants {
+    display: inline-table;
+    width: 100%;
+}
+
+.participant {
+    display: table-row;
+
+}
+
+.participant_name {
+    display: table-cell;
+    vertical-align: middle;
+    /*padding-right: 10px;*/
+
+}
+
+.plays {
+    display: inline-table;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: right;
+}
+
+.play {
+    /*display: table-cell;*/
+    vertical-align: middle;
+    width: 10px;
+    padding-right: 1px;
+    padding-left: 1px;
+    float: left;
+}
+
+.name {
+    /*float: left;*/
+}
+
+/*.plays {*/
+/*/!*float: right;*!/*/
+/*/!*width: 25%*!/*/
+/*}*/
+
+.plays > .play_5 {
+    /*float: right;*/
+    /*width: 50%*/
+}
+
+.col-3 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 66.664%;
+}
+
+.col-5 {
+    width: 83.33%;
+}
+
+.col-6 {
+    width: 100%;
+}
+
+.grid-container * {
+    box-sizing: border-box;
+}
+
+.groupnumber {
+    font-size: 1em;
+}
+
+.label {
+    font-size: 1em;
+}
+
+.matchlane {
+    display: table-row;
+    font-size: 0.7em;
+    /*clear: both;*/
+}
+
+.roundnumber {
+    font-size: 1.2em;
+    /*width: 100%;*/
+    text-align: -webkit-center;
+}
+
+.play .win a {
+    color: #00e035;
+}
+
+.participant .win a {
+    color: #00e035;
+}
+
+.play .qualified {
+    color: #00e035;
+}
+
+.participant .qualified {
+    color: #00e035;
+}
+
+.participant .loss a {
+    color: #c9c9c9;
+}
+
+.play .loss a {
+    color: #c9c9c9;
+}
+
+.noplay a {
+    color: #c9c9c9;
+}
+
+.finale {
+    width: 110%;
+}
+
+.name {
+    font-weight: bold;
+}
+
+/*.empty {*/
+/*display: none;*/
+/*}*/
+
+.results {
+    display: table;
+    margin: auto;
+    background-color: #1d1d1d;
+    padding: 50px 50px 50px 50px;
+    border-radius: 25px 25px 25px 25px;
+
+}
+
+.results .participant {
+    margin: 10px 10px 10px 10px;
+}
+
+.results .participant .participant_name {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.participant_team_members {
+    display: table-row-group;
+    font-size: smaller;
+    font-style: italic;
+    font-weight: normal;
+    /*list-style: circle;*/
+    /*margin: auto;*/
+}
+
+.participant_team_member {
+    display: table-row;
+    font-size: smaller;
+    font-style: italic;
+    font-weight: normal;
+    /*list-style: circle;*/
+    /*margin: auto;*/
+}
+
+.results .participant .participant_rank {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+    font-weight: bolder;
+    vertical-align: top;
+}
+
+.results .participant .participant_points {
+    display: table-cell;
+    width: 100px;
+    font-size: smaller;
+    font-weight: bolder;
+    text-align: right;
+    vertical-align: top;
+}
+
+.results .participant .participant_prize {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+    font-weight: bolder;
+    vertical-align: top;
+}
+
+.results .participant .participant_percent {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+    font-size: smaller;
+    vertical-align: top;
+}
+
+.prizer {
+    color: #00ff35;
+}
+
+.first {
+    font-weight: bolder;
+    font-size: x-large;
+    height: 50px;
+}
+
+.points_level_4 {
+    font-size: x-large;
+    height: 50px;
+}
+
+.points_level_3 {
+    font-weight: bolder;
+    font-size: larger;
+    height: 50px;
+}
+
+.points_level_2 {
+    font-weight: bold;
+    height: 40px;
+}
+
+.points_level_1 {
+    font-style: italic;
+    height: 30px;
+}
+
+.points_level_0 {
+    color: #c9c9c9;
+    height: 20px;
+}
+
+.results .results_title .participant_name_title {
+    display: table-header-group;
+
+}
+
+.results .results_title .participant_name_title {
+    display: table-cell;
+}
+
+.results .results_title .participant_rank_title {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+
+}
+
+.results .results_title .participant_points_title {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+}
+
+.results .results_title .participant_prize_title {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+}
+
+.results .results_title .participant_percent_title {
+    display: table-cell;
+    width: 100px;
+    text-align: right;
+}
+
+/* see http://cbracco.me/a-simple-css-tooltip/ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+a:hover {
+    text-decoration: none;
+}

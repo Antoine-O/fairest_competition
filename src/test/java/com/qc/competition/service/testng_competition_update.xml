@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Initial Scenario">
+    <test name="Initial Scenario Test" preserve-order="true">
+        <classes>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_phase_format_different">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_quickgame">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_scoringmode">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_advantage">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_with_reset">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1_without_merge">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1_2Qualified">
+                <methods>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationAllMagic"/>
+                    <include name="createAndLaunchCompetitionForSizeAndDurationFull"/>
+                </methods>
+            </class>
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest1v1v1v1_2Qualified"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest2v2"/>-->
+            <!--<class name="com.qc.competition.service.CompetitionDetailsUpdateTest3v3in1v1"/>-->
+        </classes>
+    </test>
+</suite>
